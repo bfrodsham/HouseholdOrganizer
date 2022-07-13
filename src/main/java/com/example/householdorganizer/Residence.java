@@ -7,17 +7,13 @@ public class Residence {
     private final String address;
     private final String city;
     private final String state;
-
     private final String fullAddress;
 
     public Residence(String address, String city, String state) {
 
-        this.address = standardizeResidentInput(address);
-        this.city = standardizeResidentInput(city);
-
-        // I'm making the assumption that state input will always be two letters with no punctuation.
-        this.state = state.toUpperCase();
-
+        this.address = address;
+        this.city = city;
+        this.state = state;
         this.fullAddress = this.address + ", " + this.city + ", " + this.state;
     }
 
@@ -35,19 +31,6 @@ public class Residence {
 
     public String getFullAddress() {
         return fullAddress;
-    }
-
-    // This function standardizes resident fields so that comparison
-    // between full addresses can be done later.
-    private String standardizeResidentInput(String location) {
-
-        // First, the location string is put in lowercase, and then
-        // WordUtils capitalizes the first character in each word.
-        WordUtils.capitalize(location.toLowerCase());
-
-        // Punctuation is removed. The regex used means something like
-        // "anything that is not an uppercase or lowercase letter."
-        return location.replaceAll("[^a-zA-Z ]", "");
     }
 
 }
