@@ -1,13 +1,11 @@
 package com.example.householdorganizer;
-import org.apache.commons.text.WordUtils;
-
 
 public class Residence {
 
-    private String address;
-    private String city;
-    private String state;
-    private String fullAddress;
+    private final String address;
+    private final String city;
+    private final String state;
+    private final String fullAddress;
 
     public Residence(String address, String city, String state) {
 

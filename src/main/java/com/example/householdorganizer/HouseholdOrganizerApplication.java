@@ -10,10 +10,11 @@ public class HouseholdOrganizerApplication {
 
 	public static void main(String[] args) {
 
-		File file = new File(args[1]);
+		File file = new File(args[0]);
 		HouseholdOrganizer householdOrganizer = new HouseholdOrganizer();
 
 		try {
+
 			householdOrganizer.ProcessInput(file);
 			householdOrganizer.PrintHouseholds();
 		}

@@ -1,19 +1,17 @@
 package com.example.householdorganizer;
 
-import org.apache.commons.text.WordUtils;
-
 public class Occupant {
 
-    private String firstName;
-    private String lastName;
-    private int age;
+    private final String firstName;
+    private final String lastName;
+    private final String lastFirst;
+    private final int age;
 
     public Occupant(String firstName, String lastName, int age) {
 
-        // Making sure that the first and last names have the first
-        // letter capitalized.
-        this.firstName = WordUtils.capitalize(firstName);
-        this.lastName = WordUtils.capitalize(lastName);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.lastFirst = lastName + ", " + firstName;
         this.age = age;
     }
 
@@ -23,6 +21,10 @@ public class Occupant {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getLastFirst() {
+        return lastFirst;
     }
 
     public int getAge() {
