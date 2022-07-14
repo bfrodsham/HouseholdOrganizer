@@ -35,7 +35,8 @@ public class HouseholdOrganizer {
         }
     }
 
-    // Takes the parsed tokens and maps the household data.
+    // Takes the parsed tokens, instantiates the residence, occupant,
+    // and household objects, and then maps the household data.
     private void TokensToHouseholds(String[] tokens) {
 
         // This is a pretty major assumption, which is that I can
@@ -71,7 +72,7 @@ public class HouseholdOrganizer {
         }
     }
 
-    // Standardizes resident fields for comparisons, specifically address and city.
+    // Standardizes resident fields for comparing against other resident objects.
     // The location is trimmed, put into lower case, and punctuation is removed.
     private String StandardizeResidentInput(String location) {
 

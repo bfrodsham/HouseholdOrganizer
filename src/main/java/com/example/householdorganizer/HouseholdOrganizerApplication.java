@@ -10,6 +10,7 @@ public class HouseholdOrganizerApplication {
 
 	public static void main(String[] args) {
 
+		// args[0] is the full path to the data saved as a text document.
 		File file = new File(args[0]);
 		HouseholdOrganizer householdOrganizer = new HouseholdOrganizer();
 
