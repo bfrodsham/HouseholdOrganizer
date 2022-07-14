@@ -14,6 +14,10 @@ public class HouseholdOrganizer {
         this.households = new HashMap<>();
     }
 
+    public Collection<Household> getHouseholds() {
+        return households.values();
+    }
+
     // Parses the input and formats the string fields for comparison later on.
     public void ProcessInput(File file) throws FileNotFoundException {
 
