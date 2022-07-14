@@ -4,11 +4,10 @@ import org.apache.commons.text.WordUtils;
 
 public class Residence {
 
-    private final String address;
-    private final String city;
-    private final String state;
-
-    private final String fullAddress;
+    private String address;
+    private String city;
+    private String state;
+    private String fullAddress;
 
     public Residence(String address, String city, String state) {
 
